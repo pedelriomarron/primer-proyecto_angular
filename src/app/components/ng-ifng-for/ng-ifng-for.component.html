@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col">
+        <h1>Demostración *ngIf</h1>
+        <hr>
+        <div *ngIf="show" class="card bg-primary text-white mb-3" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">La variable esta a TRUE</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+        </div>
+        <div *ngIf="show; then angular; else javascript" style="width: 100%;"></div>
+        <button (click)="action()" class="btn btn-outline-primary btn-block">Mostrar/ocultar</button>
+    </div>
+    <div class="col">
+        <h1>Demostración *ngFor</h1>
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let ele of data;let i = index" class="list-group-item">{{i+1}} - {{ele}}</li>
+        </ul>
+    </div>
+</div>
+
+<ng-template #angular>
+    <div class="card bg-primary text-white mb-3">
+        <h5 class="card-title">Angular</h5>
+        <p class="card-text">Hola mundo Angular.</p>
+    </div>
+</ng-template>
+
+<ng-template #javascript>
+    <div class="card bg-primary text-white mb-3">
+        <h5 class="card-title">Javascript</h5>
+        <p class="card-text">Hola mundo Javascript.</p>
+    </div>
+</ng-template>

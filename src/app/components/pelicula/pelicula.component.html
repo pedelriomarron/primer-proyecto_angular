@@ -1,0 +1,50 @@
+<h1>Pelicula <small>Nombre de la película</small></h1>
+<hr>
+<div class="row text-right">
+    <div class="col">
+        <button routerLink="/firebase" class="btn btn-danger">
+            <i class="fa fa-arrow-left"></i>
+            Regresar
+        </button>
+    </div>
+</div>
+
+<div class="row animated fadeIn faster">
+    <div class="col">
+        <form [formGroup]="form" (submit)="sendData(form)">
+            <div class="form-group">
+                <label for="">Firebase Id</label>
+                <input type="text" class="form-control" [(ngModel)]="id" [ngModelOptions]="{standalone: true}"
+                    placeholder="Firebase ID" disabled="disabled">
+            </div>
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre de la Película" formControlName="nombre">
+            </div>
+            <div class="form-group">
+                <label for="">Sinopsis</label>
+                <input type="area" class="form-control" placeholder="Sipnosis de la Película"
+                    formControlName="sinopsis">
+            </div>
+            <div class="form-group">
+                <label for="">Estreno</label>
+                <input type="date" class="form-control" placeholder="Estreno de la Película" formControlName="estreno">
+            </div>
+            <div class="form-group">
+                <label for="">Imagen</label>
+                <input type="text" class="form-control" placeholder="cartelería de la Película" formControlName="img">
+            </div>
+            <div class="form-group">
+                <label for="">País</label>
+                <input type="type" class="form-control" placeholder="País de la Película" formControlName="pais">
+            </div>
+            <hr>
+            <div class="form group text-center">
+                <button type="submit" class="btn btn-primary x-25" [disabled]="form.invalid">
+                    <i class="fa fa-save"></i>
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

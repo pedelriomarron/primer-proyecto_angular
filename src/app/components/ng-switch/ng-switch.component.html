@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col">
+        <h1>Demostración <small>ngSwitch</small></h1>
+        <hr>
+        <div [ngSwitch]=condition>
+            <div *ngSwitchCase="'primary'" class="alert alert-primary">
+                Primary
+            </div>
+            <div *ngSwitchCase="'secondary'" class="alert alert-secondary">
+                Secondary
+            </div>
+            <div *ngSwitchCase="'success'" class="alert alert-success">
+                Success
+            </div>
+            <div *ngSwitchCase="'warning'" class="alert alert-warning">
+                Warning
+            </div>
+            <div *ngSwitchDefault class="alert alert-danger">
+                Danger
+            </div>
+        </div>
+    </div>
+</div>

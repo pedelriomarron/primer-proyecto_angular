@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col">
+        <h1>Demostración <small>ngClass</small></h1>
+        <hr>
+        <div [ngClass]="class" class="alert">Ejemplo aplicando ngClass</div>
+        <button (click)="class='alert-secondary'" class="btn btn-secondary mr-2">Secondary</button>
+        <button (click)="class='alert-danger'" class="btn btn-danger">Danger</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col">
+        <h3 [ngClass]="{'text-danger':!change,'text-info':change}">Hola Mundo Angular</h3>
+        <button (click)="change=!change" [ngClass]="{'btn-danger':!change,'btn-info':change}" class="btn"
+            type="button">Modificar</button>
+    </div>
+</div>

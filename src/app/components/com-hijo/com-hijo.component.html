@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col">
+        <h1>Demostración <small>comunicación entre componentes - Hijo -</small></h1>
+        <hr>
+        <div class="form-group">
+            <label for="nomApe">Nombre</label>
+            <input class="form-control" [(ngModel)]="namePadre" type="text" name="nomApe"
+                placeholder="Introduzca nombres y apellidos">
+        </div>
+        <div>
+            <button (click)="sincronizarPadre()" class="btn btn-primary" type="button">Sincronizar con padre</button>
+        </div>
+    </div>
+</div>

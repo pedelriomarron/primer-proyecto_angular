@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col">
+        <h1>Demostracion <small>Pipes</small></h1>
+        <hr>
+        <table class="table table-hover">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="Variable">Variable</th>
+                    <th scope="pipe">Pipe</th>
+                    <th scope="trans">transformación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>{{name}}</td>
+                    <td>upperCase</td>
+                    <td>{{ name | uppercase }}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{name}}</td>
+                    <td>titlecase</td>
+                    <td>{{ name | titlecase }}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{name}}</td>
+                    <td>slice 0 a 3</td>
+                    <td>{{ name | slice:0:3 }}</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{name}}</td>
+                    <td>lowercase</td>
+                    <td>{{ name | lowercase }}</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{number}}</td>
+                    <td>number</td>
+                    <td>{{ number | number }}</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>{{number}}</td>
+                    <td>number 6 digitos y de 1 a 2 decimales</td>
+                    <td>{{ number | number:'6.1-2' }}</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>{{discount}}</td>
+                    <td>percent</td>
+                    <td>{{ discount | percent:'2.1' }}</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>{{number}}</td>
+                    <td>currency</td>
+                    <td>{{ number | currency:'EUR':true:'5.1-2' }}</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>{{date}}</td>
+                    <td>date</td>
+                    <td>{{ date | date }}</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>{{date}}</td>
+                    <td>date short</td>
+                    <td>{{ date | date:'shortDate' }}</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>{{date}}</td>
+                    <td>date</td>
+                    <td>{{ date | date:'dd-MM-yy' }}</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>{{fullName}}</td>
+                    <td>capitalizar</td>
+                    <td>{{ fullName | capitalizar }}</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>{{name}}</td>
+                    <td>password</td>
+                    <td>{{ name | password: '*' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

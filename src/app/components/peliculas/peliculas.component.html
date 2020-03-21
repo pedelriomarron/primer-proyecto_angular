@@ -1,0 +1,45 @@
+<h1>API Firebase</h1>
+
+<h2>Listado de Películas</h2>
+<hr>
+<div class="row">
+    <div class="col text-right">
+        <button class="btn btn-primary" [routerLink]="['/pelicula', 'new']">
+            <i class="fa fa-plus"></i>
+            Agregar
+        </button>
+    </div>
+</div>
+
+<table class="table mt-3 animated fadeIn faster">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Sipnosis</th>
+            <th scope="col">Estreno</th>
+            <th scope="col">Cartelería</th>
+            <th scope="col">País</th>
+            <th scope="col">Acciones</th>
+        </tr>
+        <tr *ngFor="let ele of data; let i = index">
+            <td>{{ele.id}}</td>
+            <td>{{ele.nombre}}</td>
+            <td>{{ele.sinopsis}}</td>
+            <td>{{ele.estreno}}</td>
+            <td>{{ele.img}}</td>
+            <td>{{ele.pais}}</td>
+            <td>
+                <button class="btn btn-info mr-2 mb-2" [routerLink]="['/pelicula', ele.id]" type="button">
+                    <i class="fa fa-pencil"></i>
+                </button>
+
+                <button class="btn btn-danger" (click)="deletePelicula(ele.id, i)" type="button">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
